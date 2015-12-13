@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B19FE14-38E4-4F33-8EFD-6AB29339B7EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVocabulary.ParserModule</RootNamespace>
+    <AssemblyName>OnlineVocabulary.ParserModule</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityLocation.cs" />
+    <Compile Include="Entities\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Entities\Helpers\GenericOperationResult.cs" />
+    <Compile Include="Entities\Helpers\OperationResult.cs" />
+    <Compile Include="Entities\LexemDefine\Lexem.cs" />
+    <Compile Include="Entities\LexemDefine\LexemType.cs" />
+    <Compile Include="Entities\TreeDefine\INode.cs" />
+    <Compile Include="Entities\TreeDefine\ITreeNode.cs" />
+    <Compile Include="Entities\TreeDefine\ITreeNodeList.cs" />
+    <Compile Include="Entities\TreeDefine\RootNode.cs" />
+    <Compile Include="Entities\TreeDefine\SyntaxTreeDefine\SyntaxNode.cs" />
+    <Compile Include="Entities\TreeDefine\SyntaxTreeDefine\SyntaxTree.cs" />
+    <Compile Include="Entities\TreeDefine\Tree.cs" />
+    <Compile Include="Entities\TreeDefine\TreeNode.cs" />
+    <Compile Include="Entities\TreeDefine\TreeNodeList.cs" />
+    <Compile Include="LexicalAnalyzer\IMatcher.cs" />
+    <Compile Include="LexicalAnalyzer\LexicalAnalyzer.cs" />
+    <Compile Include="LexicalAnalyzer\LexicalAnalyzerEngine.cs" />
+    <Compile Include="LexicalAnalyzer\RegexLexemDefinition.cs" />
+    <Compile Include="LexicalAnalyzer\RegexMatcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyntaxAnalyzer\GrammarHandler.cs" />
+    <Compile Include="SyntaxAnalyzer\IGrammarHandler.cs" />
+    <Compile Include="SyntaxAnalyzer\IUtilsHandler.cs" />
+    <Compile Include="SyntaxAnalyzer\SyntaxAnalyzer.cs" />
+    <Compile Include="SyntaxAnalyzer\UtilsHandler.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
